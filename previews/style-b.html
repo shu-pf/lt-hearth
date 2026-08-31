@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>自己成長していくアプリを開発して、日常生活のあらゆることを自動化した話</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@700;900&family=Chakra+Petch:wght@400;600&family=Space+Mono:wght@400;700&family=DotGothic16&display=swap">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { width:100%; height:100%; overflow:hidden; background:#0A0E27; }
+.deck-viewport { position:fixed; inset:0; overflow:hidden; background:#0A0E27; }
+.deck-stage { position:absolute; left:0; top:0; width:1920px; height:1080px; overflow:hidden; transform-origin:0 0;
+  background:#0A0E27; font-family:'Chakra Petch',sans-serif; color:#fff; }
+/* 40px etched grid */
+.deck-stage::before { content:""; position:absolute; inset:0; pointer-events:none;
+  background-image: linear-gradient(rgba(94,220,244,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(94,220,244,0.06) 1px, transparent 1px);
+  background-size:40px 40px; }
+/* CRT scanlines */
+.deck-stage::after { content:""; position:absolute; inset:0; pointer-events:none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.22) 0px, rgba(0,0,0,0.22) 2px, transparent 2px, transparent 4px); }
+.star { position:absolute; width:4px; height:4px; background:#fff; opacity:0.5; }
+.hud { position:absolute; top:56px; left:80px; font-family:'Space Mono',monospace; font-size:22px; letter-spacing:0.2em; color:#5EDCF4; }
+.hud-r { position:absolute; top:56px; right:80px; font-family:'Space Mono',monospace; font-size:22px; letter-spacing:0.2em; color:#F0A6CA; }
+.frame { position:absolute; inset:120px 80px; }
+.frame i { position:absolute; width:24px; height:24px; border:4px solid #5EDCF4; }
+.frame i:nth-child(1){ top:0; left:0; border-right:none; border-bottom:none; }
+.frame i:nth-child(2){ top:0; right:0; border-left:none; border-bottom:none; }
+.frame i:nth-child(3){ bottom:0; left:0; border-right:none; border-top:none; }
+.frame i:nth-child(4){ bottom:0; right:0; border-left:none; border-top:none; }
+.inner { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:0 180px; }
+.tag { display:inline-block; width:fit-content; font-family:'Space Mono',monospace; font-size:24px; font-weight:700; letter-spacing:0.16em;
+  background:#F4D03F; color:#0A0E27; padding:10px 20px; box-shadow:8px 8px 0 #0F1B3D, 8px 8px 0 2px #F0A6CA; margin-bottom:64px; }
+h1 { font-family:'DotGothic16','Tektur',sans-serif; font-weight:400; font-size:74px; line-height:1.55; color:#fff;
+  text-shadow: 4px 4px 0 #0F1B3D, 8px 8px 0 rgba(94,220,244,0.55); }
+h1 .cy { color:#5EDCF4; }
+.meta { margin-top:72px; font-family:'Space Mono',monospace; font-size:26px; color:#E2D5F2; letter-spacing:0.14em; display:flex; gap:48px; }
+.meta b { color:#F4D03F; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="deck-viewport">
+<main class="deck-stage" id="deckStage">
+  <span class="star" style="left:12%; top:14%"></span>
+  <span class="star" style="left:78%; top:9%; opacity:0.8"></span>
+  <span class="star" style="left:64%; top:22%"></span>
+  <span class="star" style="left:88%; top:70%"></span>
+  <span class="star" style="left:8%; top:78%; opacity:0.7"></span>
+  <span class="star" style="left:38%; top:8%"></span>
+  <div class="hud">2026-08-31</div>
+  <div class="hud-r">SONG LT</div>
+  <div class="frame"><i></i><i></i><i></i><i></i>
+    <div class="inner">
+      <span class="tag">READY PLAYER ONE</span>
+      <h1><span class="cy">自己成長していくアプリ</span>を開発して、<br>日常生活のあらゆることを自動化した話</h1>
+      <div class="meta"><span><b>&gt;</b> 古瀬就悟</span><span><b>&gt;</b> PRESS START</span></div>
+    </div>
+  </div>
+</main>
+</div>
+<script>
+const stage=document.getElementById('deckStage');
+const scale=()=>{const f=Math.min(innerWidth/1920,innerHeight/1080);
+stage.style.transform=`translate(${(innerWidth-1920*f)/2}px,${(innerHeight-1080*f)/2}px) scale(${f})`;};
+scale(); addEventListener('resize',scale);
+</script>
+</body>
+</html>
