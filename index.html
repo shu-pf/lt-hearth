@@ -448,7 +448,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
     <span class="ember-dot" style="left:90%; animation-delay:6.5s;"></span>
     <div class="slide-inner" style="justify-content:flex-start; padding-top:150px">
         <h1 class="reveal"><span class="accent">自己成長していくアプリ</span>を開発して、<br>日常生活のあらゆることを自動化した話</h1>
-        <p class="byline reveal">古瀬就悟 / ソングLT会</p>
+        <p class="byline reveal">2026/08/31　古瀬就悟 / ソングLT会</p>
     </div>
 </section>
 
@@ -459,7 +459,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
         <blockquote class="big-quote reveal">「帰省するときの<br>交通手段をとって」</blockquote>
         <p class="sub reveal">スマホでこう打ちました。家に着いた頃には、カレンダーから帰省の予定を拾って、交通手段を調べて価格を比較して、<strong>予約まで終わっていました</strong>。<br>自分がやったのは一文打っただけです。</p>
     </div>
-    <div class="folio"><b>02</b> / 14</div>
+    <div class="folio"><b>02</b> / 15</div>
 </section>
 
 <!-- ============ 3. 同じ要領で ============ -->
@@ -477,7 +477,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
         </div>
         <img class="art reveal" src="assets/art/phone.png" alt="">
     </div>
-    <div class="folio"><b>03</b> / 14</div>
+    <div class="folio"><b>03</b> / 15</div>
 </section>
 
 <!-- ============ 4. 機能が自分で増えていく ============ -->
@@ -486,7 +486,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
         <p class="statement reveal">この「あらゆること」には<br><span class="accent">アプリの開発そのもの</span>も含まれます</p>
         <p class="sub reveal">夜、「このボタン押しにくい」と言って寝ると、<strong>翌朝には直っています</strong>。<br>その間、自分はコードを書いていません。</p>
     </div>
-    <div class="folio"><b>04</b> / 14</div>
+    <div class="folio"><b>04</b> / 15</div>
 </section>
 
 <!-- ============ 5. 作ったもの: Hearth ============ -->
@@ -495,7 +495,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
         <p class="statement reveal" style="font-size:130px"><span class="accent">Hearth</span></p>
         <p class="sub reveal" style="margin-top:40px; font-size:38px; color:var(--fg)">スマホから、自宅のMacにいる Claude Code を動かすアプリを作りました。</p>
     </div>
-    <div class="folio"><b>05</b> / 14</div>
+    <div class="folio"><b>05</b> / 15</div>
 </section>
 
 <!-- ============ 6. 画面は3つ ============ -->
@@ -520,7 +520,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
             </figure>
         </div>
     </div>
-    <div class="folio"><b>06</b> / 14</div>
+    <div class="folio"><b>06</b> / 15</div>
 </section>
 
 <!-- ============ 7. 全体アーキテクチャ ============ -->
@@ -591,26 +591,26 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
             <text class="l" x="625" y="390" text-anchor="middle">読み書き</text>
         </svg>
     </div>
-    <div class="folio"><b>07</b> / 14</div>
+    <div class="folio"><b>07</b> / 15</div>
 </section>
 
 <!-- ============ 8. 頭脳 = LLM Wiki ============ -->
 <section class="slide">
     <div class="slide-inner split">
         <div class="txt">
-        <p class="kicker reveal">頭脳はLLM Wiki</p>
+        <p class="kicker reveal">LLM Wikiを頭脳として用いる</p>
         <p class="statement reveal" style="font-size:76px">雑な頼み方が通じるのは、<br>エージェントが<span class="accent">自分のことを知っている</span>から</p>
         <p class="sub reveal">LLM Wikiは、AIが読み書きする前提で書いたMarkdownのノート群です。Andrej Karpathyが言い出した考え方で、実装が増えています。<br>実家の場所、帰省の予定、店の好み、過去の判断が全部書いてあって、エージェントは毎回これを読んでから働きます。<br>新しいことを取り込むたびにページが書き換わるので、<strong>使うほど賢くなる</strong>。</p>
         </div>
         <img class="art reveal" src="assets/art/wiki.png" alt="">
     </div>
-    <div class="folio"><b>08</b> / 14</div>
+    <div class="folio"><b>08</b> / 15</div>
 </section>
 
 <!-- ============ 9. 苦労した話: タスクをどこに置くか ============ -->
 <section class="slide">
     <div class="slide-inner">
-        <p class="kicker reveal">記憶の設計</p>
+        <p class="kicker reveal">なぜLLM Wikiなのか</p>
         <p class="statement reveal" style="font-size:76px">静的な知識はWikiに、<br><span class="accent">流動的な状態はタスクDBに</span></p>
         <ul class="points" style="margin-top:60px">
             <li class="reveal" style="font-size:36px">会話をひたすら溜めて検索する方式 (Hermes Agent など) は、古い状態と新しい状態が混ざって、どれが正しいか分からなくなる</li>
@@ -618,7 +618,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
             <li class="reveal" style="font-size:36px">Wikiに置いていいのは、時間が経っても嘘にならないものだけ。タスクはSQLiteに出して、MCPで繋いだ</li>
         </ul>
     </div>
-    <div class="folio"><b>09</b> / 14</div>
+    <div class="folio"><b>09</b> / 15</div>
 </section>
 
 <!-- ============ 10. 機能が生える仕組み ============ -->
@@ -631,7 +631,7 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
             <li class="reveal">開発エージェントが実装 → テスト → レビュー → デプロイ</li>
         </ul>
     </div>
-    <div class="folio"><b>10</b> / 14</div>
+    <div class="folio"><b>10</b> / 15</div>
 </section>
 
 <!-- ============ 11. 開発自動化の流れ ============ -->
@@ -713,20 +713,20 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
             <text class="fn" x="890" y="538">人が読んで判断する</text>
         </svg>
     </div>
-    <div class="folio"><b>11</b> / 14</div>
+    <div class="folio"><b>11</b> / 15</div>
 </section>
 
 <!-- ============ 12. 一番の衝撃 ============ -->
 <section class="slide">
-    <div class="slide-inner split">
-        <div class="txt">
+    <div class="slide-inner">
         <p class="kicker reveal">これが一番衝撃でした</p>
-        <p class="statement reveal">ユーザーが<span class="accent">アプリを作れる人</span>に<br>なってしまう</p>
-        <p class="sub reveal">AIで開発が早くなる、と言っても、間にはなんだかんだエンジニアが必要でした。<br>アプリに要望を打ち込むと更新されたアプリが返ってくる、となると、その間に誰もいらない。</p>
+        <p class="statement reveal" style="font-size:76px">ユーザーが<span class="accent">アプリを作れる人</span>になってしまう</p>
+        <div class="reveal" style="display:flex; align-items:center; gap:70px; margin-top:40px">
+            <p class="sub" style="margin-top:0; flex:1">AIで開発が早くなる、と言っても、間にはなんだかんだエンジニアが必要でした。<br>アプリに要望を打ち込むと更新されたアプリが返ってくる、となると、その間に誰もいらない。</p>
+            <img src="assets/art/loop.png" style="width:440px; border-radius:20px" alt="">
         </div>
-        <img class="art reveal" src="assets/art/loop.png" alt="">
     </div>
-    <div class="folio"><b>12</b> / 14</div>
+    <div class="folio"><b>12</b> / 15</div>
 </section>
 
 <!-- ============ 13.5 締めの主張 ============ -->
@@ -735,7 +735,15 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
         <p class="statement reveal">アプリの中にチャットがあって、<br>そこで話すと<span class="accent">開発が進む</span></p>
         <p class="sub reveal">この形が当たり前になったら面白いと思っています。</p>
     </div>
-    <div class="folio"><b>13</b> / 14</div>
+    <div class="folio"><b>13</b> / 15</div>
+</section>
+
+<!-- ============ デモ ============ -->
+<section class="slide title-slide">
+    <div class="slide-inner">
+        <p class="statement reveal" style="font-size:130px">デモ</p>
+    </div>
+    <div class="folio"><b>14</b> / 15</div>
 </section>
 
 <!-- ============ 18. 締め ============ -->
@@ -746,16 +754,10 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
     <div class="slide-inner">
         <p class="statement reveal">ご清聴ありがとうございました</p>
     </div>
-    <div class="folio"><b>14</b> / 14</div>
+    <div class="folio"><b>15</b> / 15</div>
 </section>
 
-<!-- ============ 付録: デモ ============ -->
-<section class="slide title-slide">
-    <div class="slide-inner">
-        <p class="statement reveal" style="font-size:130px">デモ</p>
-    </div>
-    <div class="folio">付録</div>
-</section>
+
 
 <!-- ============ 付録: issueの書かせすぎ ============ -->
 <section class="slide">
