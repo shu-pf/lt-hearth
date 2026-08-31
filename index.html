@@ -599,8 +599,8 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
     <div class="slide-inner split">
         <div class="txt">
         <p class="kicker reveal">LLM Wikiを頭脳として用いる</p>
-        <p class="statement reveal" style="font-size:76px">雑な頼み方が通じるのは、<br>エージェントが<span class="accent">自分のことを知っている</span>から</p>
-        <p class="sub reveal">LLM Wikiは、AIが読み書きする前提で書いたMarkdownのノート群です。Andrej Karpathyが言い出した考え方で、実装が増えています。<br>実家の場所、帰省の予定、店の好み、過去の判断が全部書いてあって、エージェントは毎回これを読んでから働きます。<br>新しいことを取り込むたびにページが書き換わるので、<strong>使うほど賢くなる</strong>。</p>
+        <p class="statement reveal" style="font-size:76px">取り込むたびに書き換わるから、<br><span class="accent">使うほど賢くなる</span></p>
+        <p class="sub reveal">LLM Wikiは、AIが読み書きする前提で書いたMarkdownのノート群です。Andrej Karpathyが言い出した考え方で、実装が増えています。<br>実家の場所、帰省の予定、店の好み、過去の判断が全部ここに書いてあって、エージェントは毎回これを読んでから働きます。<br>「帰省するときの交通手段をとって」の雑な一文が通じるのは、このためです。</p>
         </div>
         <img class="art reveal" src="assets/art/wiki.png" alt="">
     </div>
@@ -611,11 +611,11 @@ body.editing .slide [contenteditable="true"] { outline: 1px dashed rgba(255, 159
 <section class="slide">
     <div class="slide-inner">
         <p class="kicker reveal">なぜLLM Wikiなのか</p>
-        <p class="statement reveal" style="font-size:76px">静的な知識はWikiに、<br><span class="accent">流動的な状態はタスクDBに</span></p>
+        <p class="statement reveal" style="font-size:76px">溜める記憶も圧縮する記憶も、<br><span class="accent">時間が経つと腐る</span>から</p>
         <ul class="points" style="margin-top:60px">
             <li class="reveal" style="font-size:36px">会話をひたすら溜めて検索する方式 (Hermes Agent など) は、古い状態と新しい状態が混ざって、どれが正しいか分からなくなる</li>
             <li class="reveal" style="font-size:36px">記憶を自動で圧縮して足していく方式 (Claude Code のメモリ機能など) は、それが出力に混ざってだんだんおかしくなる</li>
-            <li class="reveal" style="font-size:36px">Wikiに置いていいのは、時間が経っても嘘にならないものだけ。タスクはSQLiteに出して、MCPで繋いだ</li>
+            <li class="reveal" style="font-size:36px">Wikiは取り込むたびに書き換えるので、時間が経っても嘘にならない知識だけが残る。流動的なタスクはSQLiteに出して、MCPで繋いだ</li>
         </ul>
     </div>
     <div class="folio"><b>09</b> / 15</div>
